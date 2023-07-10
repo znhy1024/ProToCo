@@ -12,28 +12,25 @@ This is the official repository of Few-Shot and Zero-Shot Fact Verification mode
 
 ## Requirements
 
-Our code is developed upon the [T-Few](https://github.com/r-three/t-few) codebase. Plese refer to the T-Few repo for setup instruction.
+Our code is developed based on the [T-Few](https://github.com/r-three/t-few) codebase. Plese refer to the T-Few repo for setup instruction.
 
-## Prepare input data
-Please convert the train and test data file as jsonl format and the following fileds are required for each line:
+## The format of input data
+Please ensure that the train and test data files are in JSONL format, with the following fields for each line::
  ```
- {"id": instance id, "context": gold evidence text, "claim":claim text, "label": label}
+ {"id": instance id, "gold_evidence_text": gold evidence text, "claim":claim text, "label": label}
  ```
 
-## Training
+## Training & Evaluation
 
-To train ProToCo with default hyperparameters, run this command:
-
+To train ProToCo with default hyperparameters, run the following command for few-shot setting:
 ```
-python -u Main.py
+sh train_fs.sh
 ```
-After training, it will automatically output the results in terms of accuracy, recall, precision, recall, early rate and SEA.
-You may also set the hyperparameters and data dir in `config.json` to train your custom dataset and hyperparameters.
-
-## Evaluation
-By setting *evaluate_only* in `config.json`to true, you can use the same command ```python -u Main.py``` to test the trained model without training.
-
-
+run the following command for zero-shot setting:
+```
+sh train_zs.sh
+```
+After training, the script will automatically output the test results. You can also customize the hyperparameters and data directory in the default.json file to train your custom dataset with specific hyperparameters. If you set the *eval_before_training* parameter in default.json to true and *num_steps* to 0, you can use the same command to test the trained model without training.
 
 ## Citation
 
@@ -52,7 +49,6 @@ If you use this code in your research, please cite our [paper](https://arxiv.org
 
 ## Contact for issues
 - Fengzhu Zeng, fzzeng.2020@phdcs.smu.edu.sg
-- Wei Gao, weigao@smu.edu.sg
 
 ## References & Open sources
 
