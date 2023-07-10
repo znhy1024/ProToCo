@@ -53,7 +53,7 @@ If you use this code in your research, please cite our [paper](https://arxiv.org
 
 ## References & Open sources
 
-- **T-Few** : [[paper]](https://aclanthology.org/N19-1423.pdf)[[code]](https://github.com/r-three/t-few)
+- **T-Few** : [[paper]](https://openreview.net/forum?id=rBCvMG-JsPd)[[code]](https://github.com/r-three/t-few)
 - **T0** : [[paper]](https://openreview.net/forum?id=9Vrb9D0WI4), [[code]](https://github.com/bigscience-workshop/t-zero)
 - **OPT** : [[paper]](https://arxiv.org/abs/2205.01068), [[code]](https://huggingface.co/docs/transformers/model_doc/opt)
 - **GPT2-PPL** : [[paper]](https://aclanthology.org/2021.naacl-main.158.pdf), [[code]](https://github.com/HLTCHKUST/Perplexity-FactChecking)
