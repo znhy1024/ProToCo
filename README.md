@@ -38,13 +38,17 @@ After training, the script will automatically output the test results. You can a
 If you use this code in your research, please cite our [paper](https://arxiv.org/abs/2306.02569).
 
 ```
-@misc{zeng2023prompt,
-      title={Prompt to be Consistent is Better than Self-Consistent? Few-Shot and Zero-Shot Fact Verification with Pre-trained Language Models}, 
-      author={Fengzhu Zeng and Wei Gao},
-      year={2023},
-      eprint={2306.02569},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{zeng-gao-2023-prompt,
+    title = "Prompt to be Consistent is Better than Self-Consistent? Few-Shot and Zero-Shot Fact Verification with Pre-trained Language Models",
+    author = "Zeng, Fengzhu  and
+      Gao, Wei",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2023",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.findings-acl.278",
+    pages = "4555--4569"
 }
 ```
 
