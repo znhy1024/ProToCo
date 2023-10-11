@@ -15,7 +15,7 @@ do
                 if [[ ${shot} -eq 3 ]]
                 then
                     r=$((${st}/2))
-                    g=1
+                    g=2
                 elif [[ ${shot} -eq 6 ]]
                 then
                     r=$((${st}/2))
