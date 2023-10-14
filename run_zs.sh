@@ -6,15 +6,9 @@ export OUTPUT_PATH=output
 
 for ds in scifact fever vc
 do
-    for shot in 90
+    for seed in 0 2 3 4
     do
-        for seed in 0 2 3 4
-        do
-            for st in 1500 
-            do
-                r=$((${st}/(${shot}/4)))
-                python -u pl_train.py -k exp_name=${ds}_shots${shot}_seed${seed}_zs few_shot_random_seed=${seed} seed=${seed} dataset=${ds} batch_size=1 grad_accum_factor=2 num_steps=${st} eval_batch_size=4 num_shot=${shot} stage=2 zero_shot=true eval_epoch_interval=${r}
-            done
-        done
+    r=$((${st}/(${shot}/4)))
+    python -u pl_train.py -k exp_name=${ds}_shots90_seed${seed}_zs few_shot_random_seed=${seed} seed=${seed} dataset=${ds} batch_size=1 grad_accum_factor=2 num_steps=1500 eval_batch_size=4 num_shot=90 stage=2 zero_shot=true eval_epoch_interval=${r}
     done
 done
